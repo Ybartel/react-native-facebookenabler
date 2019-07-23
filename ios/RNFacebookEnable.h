@@ -7,5 +7,7 @@
 
 @interface RNFacebookEnable : NSObject <RCTBridgeModule>
 
+#define USER_DEFAULTS_KEY @"fb_enabled"
+
 @end
   
