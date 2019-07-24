@@ -14,17 +14,20 @@ RCT_EXPORT_METHOD(setEnabler:(BOOL)value)
     [[NSUserDefaults standardUserDefaults] setBool:value forKey:USER_DEFAULTS_KEY];
 }
 
-RCT_EXPORT_METHOD(isEnabled:(RCTResponseSenderBlock)callback)
+RCT_REMAP_METHOD(isEnabled,
+                 isEnabledWithResolver:(RCTPromiseResolveBlock)resolve
+                 reject:(RCTPromiseRejectBlock)reject)
 {
     BOOL result = [[NSUserDefaults standardUserDefaults] boolForKey:USER_DEFAULTS_KEY];
-    callback(@[[NSNull null], [NSNumber numberWithBool:result]]);
+    resolve([NSNumber numberWithBool:result]);
 }
 
-RCT_EXPORT_METHOD(hasValue:(RCTResponseSenderBlock)callback)
+RCT_REMAP_METHOD(hasValue,
+                 hasValueWithResolver:(RCTPromiseResolveBlock)resolve
+                 reject:(RCTPromiseRejectBlock)reject)
 {
     id value = [[NSUserDefaults standardUserDefaults] objectForKey:USER_DEFAULTS_KEY];
-    NSNumber *result = [NSNumber numberWithBool:value != nil];
-    callback(@[[NSNull null], result]);
+    resolve([NSNumber numberWithBool:value != nil]);
 }
 
 @end

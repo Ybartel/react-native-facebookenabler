@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
+import com.facebook.react.bridge.Promise;
 
 public class RNFacebookEnableModule extends ReactContextBaseJavaModule {
 
@@ -35,15 +35,15 @@ public class RNFacebookEnableModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void isEnabled(Callback callback) {
+  public void isEnabled(Promise promise) {
     SharedPreferences prefs = getSharedPreferencesForModule();
-    callback.invoke(null, prefs.getBoolean(sharedPrefsKey, false));
+    promise.resolve(prefs.getBoolean(sharedPrefsKey, false));
   }
 
   @ReactMethod
-  public void hasValue(Callback callback) {
+  public void hasValue(Promise promise) {
     SharedPreferences prefs = getSharedPreferencesForModule();
-    callback.invoke(null, prefs.contains(sharedPrefsKey));
+    promise.resolve(prefs.contains(sharedPrefsKey));
   }
 
   private SharedPreferences getSharedPreferencesForModule() {
