@@ -35,15 +35,15 @@ public class RNFacebookEnableModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void isEnabled(Callback successCallBack) {
+  public void isEnabled(Callback callback) {
     SharedPreferences prefs = getSharedPreferencesForModule();
-    successCallBack.invoke(prefs.getBoolean(sharedPrefsKey, false));
+    callback.invoke(null, prefs.getBoolean(sharedPrefsKey, false));
   }
 
   @ReactMethod
-  public void hasValue(Callback successCallBack) {
+  public void hasValue(Callback callback) {
     SharedPreferences prefs = getSharedPreferencesForModule();
-    successCallBack.invoke(prefs.contains(sharedPrefsKey));
+    callback.invoke(null, prefs.contains(sharedPrefsKey));
   }
 
   private SharedPreferences getSharedPreferencesForModule() {
