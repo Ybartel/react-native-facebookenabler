@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.description  = <<-DESC
                   RNFacebookEnable
                    DESC
-  s.homepage     = ""
+  s.homepage     = "https://github.com/Ybartel/react-native-facebookenabler"
   s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
   s.author             = { "author" => "author@domain.cn" }
