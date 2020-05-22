@@ -1,5 +1,5 @@
 
-package com.reactlibraryfacebookenable;
+package com.reactlibrary;
 
 import java.util.Arrays;
 import java.util.Collections;
