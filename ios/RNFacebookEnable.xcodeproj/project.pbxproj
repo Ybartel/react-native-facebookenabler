@@ -85,8 +85,8 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNFacebookEnable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNFacebookEnable.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BA07C5122E7563C0094FF07 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		B3E7B5881CC2AC0600A0062D /* RNFacebookEnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNFacebookEnable.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* RNFacebookEnable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNFacebookEnable.m; sourceTree = "<group>"; };
+		B3E7B5881CC2AC0600A0062D /* RNFacebookEnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RNFacebookEnable.h; path = RNFacebookEnable/RNFacebookEnable.h; sourceTree = "<group>"; };
+		B3E7B5891CC2AC0600A0062D /* RNFacebookEnable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RNFacebookEnable.m; path = RNFacebookEnable/RNFacebookEnable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
